@@ -3,6 +3,7 @@
  */
 app.config(function($routeProvider){
     $routeProvider
-        .when("/",{templateUrl: "QuestionnaireMedical/QuestionnaireMedical.html" })
+        .when("/",{templateUrl: "Accueil/accueil.html" })
+        .when("/questionnaire" , {templateUrl: "QuestionnaireMedical/QuestionnaireMedical.html"})
         .otherwise({redirectTo : "/"});
 });
