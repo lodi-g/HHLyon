@@ -13,7 +13,7 @@ class Questionnaire extends context
     private $typeDouleur;
     private $circonstanceDouleur;
     private $patient;
-    private $context;
+    public $context;
 
     public function __construct()
     {
@@ -24,12 +24,15 @@ class Questionnaire extends context
         $this->circonstanceDouleur = $_POST["circonstance"];
     }
 
-
-
     private function getPatient()
     {
-        $this->context->query("SELECT * FROM users WHERE id = " + $this->personneId);
-        //foreach ()
+        $res = $this->context->query("SELECT * FROM users WHERE id = " + $this->personneId);
+        $this->patient = $res[0];
+    }
+
+    private function getAge()
+    {
+
     }
 
 
@@ -45,7 +48,23 @@ class Questionnaire extends context
             die("Connection failed: " . $db->connect_error);
         }
         else{
-            $addPatient = $db->query("INSERT INTO ");
+            $addPatient =
+                $db->query(
+                    "INSERT INTO patient
+                      (
+                        id_douleur 
+                        , id_circonstance 
+                        , id_user 
+                        , echelle 
+                      ) 
+                      VALUES 
+                      (
+                        "+$this->typeDouleur
+                        +"," + $this->circonstanceDouleur
+                        +"," + $this->personneId
+                        +"," + $this->niveauDouleur+
+                      ")");
+            return $addPatient;
         }
     }
 }
