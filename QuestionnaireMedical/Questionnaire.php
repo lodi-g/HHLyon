@@ -6,6 +6,7 @@
  * Date: 19/11/2016
  * Time: 18:13
  */
+include_once("../Connexion/context.php");
 class Questionnaire extends context
 {
     private $personneId;
@@ -43,28 +44,23 @@ class Questionnaire extends context
 
     public function add()
     {
-        $db = new mysqli("hhlyon", "", "");
-        if ($db->connect_error) {
-            die("Connection failed: " . $db->connect_error);
-        }
-        else{
-            $addPatient =
-                $db->query(
-                    "INSERT INTO patient
-                      (
-                        id_douleur 
-                        , id_circonstance 
-                        , id_user 
-                        , echelle 
-                      ) 
-                      VALUES 
-                      (
-                        "+$this->typeDouleur
-                        +"," + $this->circonstanceDouleur
-                        +"," + $this->personneId
-                        +"," + $this->niveauDouleur+
-                      ")");
-            return $addPatient;
-        }
+        $addPatient =
+            $this->context->query(
+                "INSERT INTO patient
+                  (
+                    id_douleur 
+                    , id_circonstance 
+                    , id_user 
+                    , echelle 
+                  ) 
+                  VALUES 
+                  (
+                    "+$this->typeDouleur
+                    +"," + $this->circonstanceDouleur
+                    +"," + $this->personneId
+                    +"," + $this->niveauDouleur+
+                  ")");
+        return $addPatient;
+
     }
 }
