@@ -1,0 +1,131 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost
+-- Généré le :  Sam 19 Novembre 2016 à 19:43
+-- Version du serveur :  5.7.11
+-- Version de PHP :  5.6.18
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `hhlyon`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `circonstance`
+--
+
+CREATE TABLE `circonstance` (
+  `id_circonstance` int(11) NOT NULL,
+  `Circonstance_type` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `douleur`
+--
+
+CREATE TABLE `douleur` (
+  `id_douleur` int(11) NOT NULL,
+  `Douleur_type` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `patient`
+--
+
+CREATE TABLE `patient` (
+  `id_user` int(11) DEFAULT NULL,
+  `id_douleur` int(11) DEFAULT NULL,
+  `id_circonstance` int(11) DEFAULT NULL,
+  `echelle` int(11) DEFAULT NULL,
+  `alerte` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(50) DEFAULT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
+  `date_naissance` varchar(10) DEFAULT NULL,
+  `adresse` varchar(100) DEFAULT NULL,
+  `telephone` int(10) DEFAULT NULL,
+  `nom_personne_confiance` varchar(50) DEFAULT NULL,
+  `prenom_personne_confiance` varchar(50) DEFAULT NULL,
+  `tel_personne_confiance` int(10) DEFAULT NULL,
+  `status` char(1) DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `circonstance`
+--
+ALTER TABLE `circonstance`
+  ADD PRIMARY KEY (`id_circonstance`);
+
+--
+-- Index pour la table `douleur`
+--
+ALTER TABLE `douleur`
+  ADD PRIMARY KEY (`id_douleur`);
+
+--
+-- Index pour la table `patient`
+--
+ALTER TABLE `patient`
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_douleur` (`id_douleur`),
+  ADD KEY `id_circonstance` (`id_circonstance`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `patient`
+--
+ALTER TABLE `patient`
+  ADD CONSTRAINT `patient_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `patient_ibfk_2` FOREIGN KEY (`id_douleur`) REFERENCES `douleur` (`id_douleur`),
+  ADD CONSTRAINT `patient_ibfk_3` FOREIGN KEY (`id_circonstance`) REFERENCES `circonstance` (`id_circonstance`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
