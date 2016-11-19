@@ -6,20 +6,32 @@
  * Date: 19/11/2016
  * Time: 18:13
  */
-class Questionnaire
+class Questionnaire extends context
 {
-    private $_personneId;
-    private $_niveauDoubleur;
-    private $_typeDoubleur;
-    private $_circonstanceDouleur;
+    private $personneId;
+    private $niveauDouleur;
+    private $typeDouleur;
+    private $circonstanceDouleur;
+    private $patient;
+    private $context;
 
     public function __construct()
     {
-
-        $_niveauDouleur = $_POST["niveauDouleur"];
-        $_typeDouleur = $_POST["typeDouleur"];
-        $_circonstanceDouleur = $_POST["circonstance"];
+        $this->context = $this->connect();
+        $this->context = (new context())->connect();
+        $this->niveauDouleur = $_POST["niveauDouleur"];
+        $this->typeDouleur = $_POST["typeDouleur"];
+        $this->circonstanceDouleur = $_POST["circonstance"];
     }
+
+
+
+    private function getPatient()
+    {
+        $this->context->query("SELECT * FROM users WHERE id = " + $this->personneId);
+        //foreach ()
+    }
+
 
     private function getAlert()
     {
