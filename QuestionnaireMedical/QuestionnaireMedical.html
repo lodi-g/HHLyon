@@ -1,82 +1,78 @@
-<h1>POUR FACILITER VOTRE PARCOURS</h1>
-<h2>Donnez nous quelques informations complémentaires sur vos symptômes</h2>
 
+<div class="text-center">
+    <h1>POUR FACILITER VOTRE PARCOURS</h1>
+    <h2>Donnez nous quelques informations complémentaires sur vos symptômes</h2>
+</div>
+
+<div class="top30">
+<div class="container">
 <form>
     <div class="form-group">
         <label for="list_douleur">Quelle est l’intensité de la douleur sur une échelle de 1 à 10
             (1 pour une douleur faible 10 pour une douleur très intense)?</label>
-        <select id="list_douleur">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>1</option>
-            <option>1</option>
-            <option>1</option>
-            <option>1</option>
-            <option>1</option>
-            <option>1</option>
-            <option>1</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleSelect1">Example select</label>
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="list_douleur">
             <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="exampleSelect2">Example multiple select</label>
-        <select multiple class="form-control" id="exampleSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="exampleTextarea">Example textarea</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-    </div>
-    <fieldset class="form-group">
-        <legend>Radio buttons</legend>
+        <legend>Quel(s) qualificatif(s) correspond(ent) le mieux à la description de votre douleur?</legend>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                Option one is this and that&mdash;be sure to include why it's great
+                <input type="radio" class="form-check-input" name="optionsRadios" id="pique" value="option2">
+                Ca pique
             </label>
         </div>
         <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                Option two can be something else and selecting it will deselect option one
+                <input type="radio" class="form-check-input" name="optionsRadios" id="brule" value="option2">
+                Ca brule
             </label>
         </div>
-        <div class="form-check disabled">
+        <div class="form-check">
             <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                Option three is disabled
+                <input type="radio" class="form-check-input" name="optionsRadios" id="comprime" value="option2">
+                Ca comprime
             </label>
         </div>
-    </fieldset>
-    <div class="form-check">
-        <label class="form-check-label">
-            <input type="checkbox" class="form-check-input">
-            Check me out
-        </label>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="respiration" value="option2">
+                Ca empêche la respiration
+            </label>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+        <legend>Dans quelle circonstance avez vous mal?</legend>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="pique" value="option2">
+                Tout le temps
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="brule" value="option2">
+                Quand je fais un effort
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="comprime" value="option2">
+                Sans circonstance particulière
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Envoyer</button>
 </form>
+</div>
+</div>
