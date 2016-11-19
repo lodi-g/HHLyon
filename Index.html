@@ -9,33 +9,38 @@
 
     <!-- Bootstrap -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="node_modules/bootstrap/dist/css/style.css" rel="stylesheet">
 
 </head>
     <body ng-app="app">
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Accueil</a>
-        <a href="#">Organisation</a>
-        <a href="#">Symptomes</a>
-        <a href="#">Something</a>
-    </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
 
-    <!-- Use any element to open the sidenav -->
-    <span onclick="openNav()">Menu</span>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"> L.U.Lu </a>
+                </div>
 
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-        <div ng-view></div>
-    </div>
-
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Organisations</a></li>
+                        <li><a href="#">Symptomes</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div ng-view></div>
 
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
     <script src="route.js"></script>
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script src="nav.js"></script>
     <script src="node_modules/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
