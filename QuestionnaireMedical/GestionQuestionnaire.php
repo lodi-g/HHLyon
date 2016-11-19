@@ -7,5 +7,5 @@
  */
     include ("Questionnaire.php");
     $res = new Questionnaire();
-    echo $res;
+    $res->add();
 ?>
