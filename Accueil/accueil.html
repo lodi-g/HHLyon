@@ -1,8 +1,30 @@
 <div class="container-fluid">
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <p>
+            <i class="glyphicon glyphicon-bullhorn"></i>
+            Bienvenue à l'hopital ${{hospital}} ! Nous essayons de vous prendre en charge le plus rapidement possible.
+        </p>
+    </div>
     <div class="media">
         <div class="media-left media-middle">
-            <a href="#"></a>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Docteur ${{doctor}}, ${{job}}."><img class="media-object img-rounded" src="${{doctor_image}}" alt="Image du docteur ${{doctor}}" /></a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Aujourd'hui, le docteur ${{doctor}} et son équipe vous accueillent.</h4>
+            <p>
+                <a href="informations_equipe.html">Plus d'informations.</a>
+            </p>
         </div>
     </div>
-    <h4>Aujourd'hui, le docteur ${{doctor}} et son équipe vous accueillent.</h4>
+    <div class="btn-group-vertical" role="group" aria-label="">
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-default">Vos symptomes et leurs explications.</button>
+            <button type="button" class="btn btn-default">Le déroulement de la consultation.</button>
+            <button type="button" class="btn btn-default">Vous ^etes accompagnateur ?</button>
+        </div>
+    </div>
 </div>
+
+<script>
+    $("[data-toggle='tooltip']").tooltip();
+</script>
