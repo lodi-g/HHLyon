@@ -20,12 +20,12 @@ class context
         $this->database ="hhlyon";
     }
 
-    public function connect()
+    public function try_connect()
     {
         //Tentative de connexion à la base de donnée :
         try
         {
-            $this->bdd = new PDO('mysql:host=localhost;dbname='+$this->database+';charset=utf8', $this->user, $this->password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            $this->bdd = new PDO('mysql:host=localhost;dbname='.$this->database.';charset=utf8', $this->user, $this->password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
         catch (Exception $e)
         {
