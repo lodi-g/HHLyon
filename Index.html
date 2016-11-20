@@ -7,35 +7,77 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Try me</title>
 
-    <!-- Bootstrap -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="node_modules/bootstrap/dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="node_modules/mdl/material.min.css" rel="stylesheet">
+    <link href="node_modules/mdl/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 </head>
-    <body ng-app="app">
-    <div id="mySidenav" class="sidenav">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a href="#/">Accueil</a>
-        <a href="#/organisation">Organisation</a>
-        <a href="#/symptomes">Symptomes</a>
-        <a href="#/questionnaire">Préparation consultation</a>
+<body ng-app="app">
+    <div id="main" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">L.U.Lu</span>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">L.U.Lu</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#/">Accueil</a>
+                <a class="mdl-navigation__link" href="#/organisation">Organisation</a>
+                <a class="mdl-navigation__link" href="#/symptomes">Symptomes</a>
+                <a class="mdl-navigation__link" href="#/questionnaire">Préparation consultation</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content" ng-view>
+            </div>
+        </main>
     </div>
 
-    <!-- Use any element to open the sidenav -->
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" onclick="openNav()"></span>
-
-    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
-        <div ng-view></div>
-    </div>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="app.js"></script>
     <script src="route.js"></script>
     <script src="nav.js"></script>
-    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script src="node_modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="node_modules/mdl/material.min.js"></script>
+    <script>
+    document.querySelectorAll(".mdl-navigation__link").forEach(function(el) {
+        el.addEventListener("click", function() {
+            document.querySelectorAll(".mdl-layout--fixed-header .is-visible").forEach(function(el) {
+                el.classList.remove("is-visible");
+                setTimeout(function() {
+                    componentHandler.upgradeDom();
+                    addEventOnRange();
+                }, 100);
+            });
+        });
+    });
+    setTimeout(function() {
+        componentHandler.upgradeDom();
+        addEventOnRange();
+    }, 500);
+    function addEventOnRange() {
+        document.querySelector("[type='range']").addEventListener("input", function(el) {
+            let data = document.querySelector(".mdl-slider__background-lower").getAttribute("style").replace(/flex: 0\.([0-9]+) .*/ig, "$1").replace("flex: 1 1 0%;", "10").replace("flex: 0 1 0%;", "0");
+            document.querySelector(".range-badge").setAttribute("data-badge", data);
+        });
+    }
+    </script>
+
+
+    <script>
+        $("#info").click(function(){
+            $("#textinfo").slideDown();
+        });
+
+        $("#deroul").click(function(){
+            $("#textderoul").slideDown();
+        });
+    </script>
 </body>
 </html>

@@ -1,50 +1,56 @@
+<main class="hhc-main">
+    <h3>Informations complémentaires.</h3>
+    <p>Donnez nous quelques informations complémentaires pour faciliter et accélérer votre parcours au sein de nos services.</p>
 
-<div class="text-center">
-    <h1>POUR FACILITER VOTRE PARCOURS</h1>
-    <h2>Donnez nous quelques informations complémentaires sur vos symptômes</h2>
-</div>
+    <form method="post" action="#/verificationQuestionnaire/#burn">
+        <p>
+            Indice de douleur entre <span class="mdl-badge range-badge" data-badge="1">1 et 10</span> (1 étant le plus bas et 10 étant une douleur insupportable)
+            <input class="mdl-slider mdl-js-slider" type="range" min="0" max="10" value="1" tabindex="0" name="niveauDouleur">
+        </p>
 
-<div class="top30">
-<div class="container" style="margin-top: 50px">
-<form method="post" enctype="multipart/form-data" action="QuestionnaireMedical/GestionQuestionnaire.php">
-    <div class="form-group">
-        <legend>Quelle est l’intensité de la douleur sur une échelle de 1 à 10
-            (1 pour une douleur faible 10 pour une douleur très intense)?</legend>
-        <select class="form-control" id="list_douleur" name="niveauDouleur">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <legend>Quel(s) qualificatif(s) correspond(ent) le mieux à la description de votre douleur?</legend>
-        <select class="form-control" name="typeDouleur">
-            <option value="1">Ca pique</option>
-            <option value="2">Ca brule</option>
-            <option value="3">Ca comprime</option>
-            <option value="4">Ca empêche la respiration</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <legend>Dans quelle circonstance avez vous mal?</legend>
-        <select class="form-control" name="circonstance">
-            <option value="1">Tout le temps</option>
-            <option value="2">Quand je fais un effort</option>
-            <option value="3">Sans circonstance particulière</option>
-        </select>
-    </div>
+        <p>
+            Quel(s) qualificatif(s) correspond(ent) le mieux à la description de votre douleur ?
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="burn">
+                <input type="checkbox" id="burn" class="mdl-checkbox__input" name="typeDouleur" value="1">
+                <span class="mdl-checkbox__label">Ca brule</span>
+            </label>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="compress">
+                <input type="checkbox" id="compress" class="mdl-checkbox__input" name="typeDouleur" value="2">
+                <span class="mdl-checkbox__label">Ca comprime</span>
+            </label><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="sting">
+                <input type="checkbox" id="sting" class="mdl-checkbox__input" name="typeDouleur" value="3">
+                <span class="mdl-checkbox__label">Ca pique</span>
+            </label>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="block">
+                <input type="checkbox" id="block" class="mdl-checkbox__input" name="typeDouleur" value="4">
+                <span class="mdl-checkbox__label">Ca empêche la respiration</span>
+            </label>
+        </p>
 
-    <button type="submit" class="btn btn-primary">Envoyer</button>
-</form>
-</div>
-</div>
+        <p>
+            Dans quelle circonstance avez vous mal ?
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="1">
+                <input type="radio" id="1" class="mdl-radio__button" name="circonstance" value="1" checked>
+                <span class="mdl-radio__label">Tout le temps</span>
+            </label>
+
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="2">
+                <input type="radio" id="2" class="mdl-radio__button" name="circonstance" value="2">
+                <span class="mdl-radio__label">Quand je fais un effort</span>
+            </label>
+
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="3">
+                <input type="radio" id="3" class="mdl-radio__button" name="circonstance" value="2">
+                <span class="mdl-radio__label">Sans circonstances particulières</span>
+            </label>
+        </p>
+        <hr width="90%"/>
+        <p>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect"> Envoyer !</button>
+        </p>
+    </form>
+</main>
+
 <?php
 include_once ("Questionnaire.php");
 echo isset($_POST['niveauDouleur']);

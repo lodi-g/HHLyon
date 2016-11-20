@@ -1,0 +1,60 @@
+<div class="hhc-main">
+
+    <div class="col-xs-12">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+            <div class="accomp"> Vous etes accompagnant?</div></button>
+
+    </div>
+
+
+    <h2 style="margin-bottom: 0px;">Formulaire administratif</h2> <br>
+    <h5 style="margin-top: 0px; margin-bottom: 0px;">Veillez remplir les champs pour validé votre pré-inscription à l'hôpital Edouard Herriot.</h5>
+
+    <form method="post" action="Inscription/gestionInscription.php">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nom" name="nom">
+            <label class="mdl-textfield__label" for="nom">Nom</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="prenom" name="prenom">
+            <label class="mdl-textfield__label" for="prenom">Prénom</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="date" id="date" name="date_naissance">
+            <label class="mdl-textfield__label" for="date"></label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="adresse" name="adresse">
+            <label class="mdl-textfield__label" for="adresse">Adresse</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" id="number" name="telephone">
+            <label class="mdl-textfield__label" for="number">Téléphone</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nompersonne" name="nom_personne_confiance">
+            <label class="mdl-textfield__label" for="nompersonne">Nom de la personne de confiance</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="prenompersonne" name="prenom_personne_confiance">
+            <label class="mdl-textfield__label" for="prenompersonne">Prénom de la personne de confiance</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="telconfiance" name="tel_personne_confiance">
+            <label class="mdl-textfield__label" for="telconfiance">Téléphone de la personne de confiance</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="status" name="status">
+            <label class="mdl-textfield__label" for="status">Status</label>
+        </div>
+
+        <button type="submit" value="Envoyé" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Envoyé
+        </button>
+
+
+    </form>
+
+</div>

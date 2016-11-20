@@ -1,41 +1,36 @@
 <div class="container">
-    <div class="alert alert-success alert-dismissible" role="alert">
-        <p>
-            <strong><i class="glyphicon glyphicon-bullhorn bold"></i></strong>
-            Bienvenue à l'hopital ${hospital} ! Nous essayons de vous prendre en charge le plus rapidement possible.
-        </p>
+    <div class="demo-card-square mdl-card mdl-shadow--2dp welcome-card">
+        <div class="mdl-card__title mdl-card--expand">
+            <h3 class="mdl-card__title-text"><i class="material-icons">speaker_notes</i> <span class="welcome-message">Bienvenue !</span></h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>
+                Bienvenue à l'hopital Edouard Herriot ! Nous essayons de vous prendre en charge le plus rapidement possible.
+            </p>
+        </div>
     </div>
-    <hr width="90%" />
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#" data-toggle="tooltip" data-placement="top" title="Docteur ${doctor}, ${job}.">
-                <img class="media-object img-circle img-doctor" src="https://thumbs.dreamstime.com/s/pleasant-businessman-portrait-gray-background-s-35884101.jpg" alt="Image du docteur ${doctor}" />
+    <div class="welcome-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Martin Dupont, médecin généraliste.</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Le docteur <strong>Martin Dupont</strong>, <strong>médecin généraliste</strong> et son équipe sont la pour vous accompagner tout au long de votre prise en charge.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Découvrez l'équipe médicale
             </a>
         </div>
-        <div class="media-body">
-            <br />
-            <h4 class="media-heading">Aujourd'hui, le docteur ${doctor} et son équipe vous accueillent.</h4>
-            <p>
-                <a href="informations_equipe.html">Plus d'informations.</a>
-            </p>
-        </div>
     </div>
-    <hr width="90%" />
-    <!--<div class="btn-group-vertical" role="group" aria-label="">
-        <div class="btn-group btn-group-lg">-->
-            <p>
-                <button type="button" class="btn btn-default btn-lg btn-home">Vos symptomes et leurs explications</button>
-            </p>
-            <p>
-                <button type="button" class="btn btn-default btn-lg btn-home">Le déroulement de la consultation</button>
-            </p>
-            <p>
-                <button type="button" class="btn btn-default btn-lg btn-home">Vous ^etes accompagnateur ?</button>
-            </p>
-
-        <!--</div>
-    </div>-->
+    <div class="welcome__buttons-list">
+        <p>
+            <button type="button" class="mdl-button mdl-js-button">Vos symptômes et leurs explications</button>
+        </p>
+        <p>
+            <button type="button" class="mdl-button mdl-js-button">Le déroulement de la consultation</button>
+        </p>
+        <p>
+            <button type="button" class="mdl-button mdl-js-button">Vous êtes accompagnateur ?</button>
+        </p>
+    </div>
 </div>
-
-<style>
-</style>
