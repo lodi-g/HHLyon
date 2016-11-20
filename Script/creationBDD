@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Sam 19 Novembre 2016 à 19:43
+-- Généré le :  Dim 20 Novembre 2016 à 09:10
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.18
 
@@ -31,6 +31,15 @@ CREATE TABLE `circonstance` (
   `Circonstance_type` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `circonstance`
+--
+
+INSERT INTO `circonstance` (`id_circonstance`, `Circonstance_type`) VALUES
+(1, 'Tout le temps'),
+(2, 'Quand je fais un effort'),
+(3, 'Sans circonstances particulières');
+
 -- --------------------------------------------------------
 
 --
@@ -41,6 +50,16 @@ CREATE TABLE `douleur` (
   `id_douleur` int(11) NOT NULL,
   `Douleur_type` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `douleur`
+--
+
+INSERT INTO `douleur` (`id_douleur`, `Douleur_type`) VALUES
+(1, 'Brule'),
+(2, 'Comprime'),
+(3, 'Pique'),
+(4, 'Empêche respiration');
 
 -- --------------------------------------------------------
 
@@ -55,6 +74,17 @@ CREATE TABLE `patient` (
   `echelle` int(11) DEFAULT NULL,
   `alerte` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `patient`
+--
+
+INSERT INTO `patient` (`id_user`, `id_douleur`, `id_circonstance`, `echelle`, `alerte`) VALUES
+(1, 4, 1, 1, NULL),
+(1, 1, 1, 1, NULL),
+(1, 3, 1, 1, NULL),
+(1, 4, 1, 1, NULL),
+(1, 4, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -72,8 +102,18 @@ CREATE TABLE `users` (
   `nom_personne_confiance` varchar(50) DEFAULT NULL,
   `prenom_personne_confiance` varchar(50) DEFAULT NULL,
   `tel_personne_confiance` int(10) DEFAULT NULL,
-  `status` char(1) DEFAULT 'N'
+  `status` char(1) DEFAULT 'N',
+  `token` varchar(6) DEFAULT NULL,
+  `sexe` char(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `nom`, `prenom`, `date_naissance`, `adresse`, `telephone`, `nom_personne_confiance`, `prenom_personne_confiance`, `tel_personne_confiance`, `status`, `token`, `sexe`) VALUES
+(1, 'KADI', 'Massil', '04/05/1993', '29 rue colin', 631757617, NULL, NULL, NULL, 'N', NULL, NULL),
+(2, 'Esra', 'Karakus', '29/06/1993', NULL, NULL, NULL, NULL, NULL, 'N', NULL, NULL);
 
 --
 -- Index pour les tables exportées
@@ -113,7 +153,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Contraintes pour les tables exportées
 --

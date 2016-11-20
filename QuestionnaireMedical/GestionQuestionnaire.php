@@ -6,9 +6,8 @@
  * Time: 18:12
  */
 
-include_once ("Questionnaire.php");
-    echo isset($_POST['niveauDouleur']);
-    $res = new Questionnaire($_POST['niveauDouleur'],$_POST["typeDouleur"],$_POST["circonstance"]);
-    $resA = $res->getAge();
+    include_once ("Questionnaire.php");
 
+    $res = new Questionnaire($_POST['niveauDouleur'],$_POST["typeDouleur"],$_POST["circonstance"]);
+    $resA = $res->add();
 ?>

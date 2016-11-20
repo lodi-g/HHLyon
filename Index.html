@@ -7,9 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Try me</title>
 
-    <!-- Bootstrap
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="node_modules/bootstrap/dist/css/style.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link href="node_modules/mdl/material.min.css" rel="stylesheet">
@@ -22,12 +19,12 @@
     <div id="main" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">L.U.Lu</span>
+                <span class="mdl-layout-title">L.U.lu</span>
                 <div class="mdl-layout-spacer"></div>
             </div>
         </header>
         <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">L.U.Lu</span>
+            <span class="mdl-layout-title">L.U.lu</span>
             <nav class="mdl-navigation">
                 <a class="mdl-navigation__link" href="#/">Accueil</a>
                 <a class="mdl-navigation__link" href="#/organisation">Organisation</a>
@@ -72,6 +69,13 @@
     }
     </script>
 
+    <script>
+    $("a").on("click", function() {
+        setTimeout(function() {
+            componentHandler.upgradeDom();
+        }, 300);
+    });
+    </script>
 
 
 </body>

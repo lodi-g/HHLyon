@@ -16,14 +16,18 @@ class Questionnaire extends context
     private $circonstanceDouleur;
     private $patient;
     private $context;
+    private $sexe;
 
     public function __construct($niveauDouleur ,$typeDouleur , $circonstance)
     {
+        $session = Session::getInstance();
         $this->context = (new context())->try_connect();
         $this->niveauDouleur = $niveauDouleur;
         $this->typeDouleur = $typeDouleur;
         $this->circonstanceDouleur = $circonstance;
-        $this->personneId = '1';
+        $this->personneId = '2';
+        $this->sexe=$session->sexe;
+        
     }
 
     private function getPatient()
@@ -32,39 +36,67 @@ class Questionnaire extends context
         $this->patient = $res[0];
     }
 
-    public function getAge()
+    public function getAge($date_naissance)
+
     {
-        return "12";
+        $arr1 = explode('/', $date_naissance);
+        $arr2 = explode('/', date('d/m/Y'));
+
+        if (($arr1[1] < $arr2[1]) || (($arr1[1] == $arr2[1]) && ($arr1[0] <= $arr2[0])))
+            return $arr2[2] - $arr1[2];
+
+        return $arr2[2] - $arr1[2] - 1;
+
     }
 
 
     private function getAlert()
     {
-
+        if($this->getAge() > 50 && $this->sexe == "H")
+        {
+            if($this->niveauDouleur > 2)
+            {
+                if(in_array(2 ,  $this->typeDouleur) && in_array(4 ,  $this->typeDouleur))
+                {
+                    return 1;
+                }
+            }
+        }
+        else if($this->niveauDouleur > 8 )
+        {
+            if(in_array(2 ,  $this->typeDouleur) && in_array(4 ,  $this->typeDouleur))
+            {
+                return 1;
+            }
+        }
+        else
+            return 0;
     }
 
     public function add()
     {
-        echo "Numero personne";
-        $message = "Message";
-        echo $message;
-        echo "Fin numero personne";
-        $addPatient = true;
-            /*$this->context->query(
-                "INSERT INTO patient
+        foreach ($this->typeDouleur as $value)
+        {
+            $addPatient =
+                $this->context->query(
+                    "INSERT INTO patient
                   (
                     id_douleur 
                     , id_circonstance 
                     , id_user 
                     , echelle 
+                    , alerte
                   ) 
                   VALUES 
                   (
-                    "+$this->typeDouleur
-                    +"," + $this->circonstanceDouleur
-                    +"," + $this->personneId
-                    +"," + $this->niveauDouleur+
-                  ")");*/
+                    ". $value.
+                    "," . $this->circonstanceDouleur
+                    ."," . $this->personneId
+                    ."," . $this->niveauDouleur
+                    ."," . $this->getAlert()
+                    .")");
+        }
+
         return $addPatient;
 
     }

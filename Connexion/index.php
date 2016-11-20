@@ -6,9 +6,9 @@
         <p class="connect-form--text">
             Connectez vous à l'aide de votre code unique transmis par l'accueil.
         </p>
-        <form role="form" action="Connexion/login.php" id="form">
+        <form role="form" method="post" action="Connexion/login.php" id="form">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="token">
+                <input class="mdl-textfield__input" type="text" id="token" name="token">
                 <label class="mdl-textfield__label" for="token">Identifiant unique</label>
             </div>
         </form>
