@@ -48,7 +48,7 @@ class Questionnaire extends context
             {
                 if(in_array(2 ,  $this->typeDouleur) && in_array(4 ,  $this->typeDouleur))
                 {
-                    return true;
+                    return 1;
                 }
             }
         }
@@ -56,16 +56,15 @@ class Questionnaire extends context
         {
             if(in_array(2 ,  $this->typeDouleur) && in_array(4 ,  $this->typeDouleur))
             {
-                return true;
+                return 1;
             }
         }
         else
-            return false;
+            return 0;
     }
 
     public function add()
     {
-        $this->getAlert();
         foreach ($this->typeDouleur as $value)
         {
             $addPatient =
@@ -80,10 +79,10 @@ class Questionnaire extends context
                   ) 
                   VALUES 
                   (
-                    ". (string)$this->typeDouleur.
+                    ". $value.
                     "," . $this->circonstanceDouleur
                     ."," . $this->personneId
-                    ."," . (string)$value
+                    ."," . $this->niveauDouleur
                     ."," . $this->getAlert()
                     .")");
         }
