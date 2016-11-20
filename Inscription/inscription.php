@@ -17,7 +17,6 @@ class Inscription extends context
     private $nom_personne_confiance;
     private $prenom_personne_confiance;
     private $tel_personne_confiance;
-    private $status;
     private $context;
 
     public function __construct()
@@ -32,7 +31,7 @@ class Inscription extends context
         $this->nom_personne_confiance = $_POST["nom_personne_confiance"];
         $this->prenom_personne_confiance = $_POST["prenom_personne_confiance"];
         $this->tel_personne_confiance = $_POST["tel_personne_confiance"];
-        $this->status = $_POST["status"];
+
     }
 
 
