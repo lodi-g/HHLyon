@@ -1,21 +1,55 @@
-<div class="container-fluid">
-    <h1>Formulaire administratif</h1> <br>
+<div class="hhc-main">
 
-    <form method="post" action="inscription.php">
-        <div class="form-group">
-            <label for
+    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+         <i class="material-icons"></i>
+    </button>
+
+    <h2>Formulaire administratif</h2> <br>
+
+    <form method="post" action="Inscription/gestionInscription.php">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nom" name="nom">
+            <label class="mdl-textfield__label" for="nom">Nom</label>
         </div>
-            Nom : <input type="text"  name="nom" /> <br><br>
-            Prénom : <input type="text"  name="prenom" /> <br><br>
-            Date de naissance : <input type="text" name="date_naissance" /> <br><br>
-            Adresse : <input type="text" name="adresse" /> </br>
-            Téléphone : <input type="text" name="telephone" /> <br><br>
-            Nom d'une personne de confiance : <input type="text" name="nom_personne_confiance" /> <br><br>
-            Prénom d'une personne de confiance : <input type="text" name="prenom_personne_confiance" /> <br><br>
-            Téléphone d'une personne de confiance : <input type="text" name="tel_personne_confiance" /> <br><br>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="prenom" name="prenom">
+            <label class="mdl-textfield__label" for="prenom">Prénom</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="date" id="date" name="date_naissance">
+            <label class="mdl-textfield__label" for="date"></label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="adresse" name="adresse">
+            <label class="mdl-textfield__label" for="adresse">Adresse</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" id="number" name="telephone">
+            <label class="mdl-textfield__label" for="number">Téléphone</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nompersonne" name="nom_personne_confiance">
+            <label class="mdl-textfield__label" for="nompersonne">Nom de la personne de confiance</label>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="prenompersonne" name="prenom_personne_confiance">
+            <label class="mdl-textfield__label" for="prenompersonne">Prénom de la personne de confiance</label>
+        </div>
 
-            <input type="submit" value="Envoyé" />
-        </p>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="telconfiance" name="tel_personne_confiance">
+            <label class="mdl-textfield__label" for="telconfiance">Téléphone de la personne de confiance</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="status" name="status">
+            <label class="mdl-textfield__label" for="status">Status</label>
+        </div>
+
+        <button type="submit" value="Envoyé" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Envoyé
+        </button>
+
 
     </form>
 
