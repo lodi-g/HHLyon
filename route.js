@@ -3,8 +3,8 @@
  */
 app.config(function($routeProvider){
     $routeProvider
-        .when("/",{templateUrl: "Connexion/index.html" })
-        .when("/accueil", {templateUrl: "Accueil/accueil.php" })
+        .when("/",{templateUrl: "Connexion/index.php" })
+        .when("/accueil", {templateUrl: "Accueil/accueil.html" })
         .when("/symptomes",{templateUrl: "Accueil/symptomes.html" })
         .when("/questionnaire" , {templateUrl: "QuestionnaireMedical/QuestionnaireMedical.html"})
         .when("/verificationQuestionnaire" , {templateUrl : "QuestionnaireMedical/GestionQuestionnaire.php"})
