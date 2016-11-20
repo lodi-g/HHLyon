@@ -12,5 +12,4 @@ app.config(function($routeProvider){
         .when("/connect" , {templateUrl : "Connexion/login.php"})
         .when("/error", {templateUrl : "Connexion/error.html"})
         .otherwise({redirectTo : "/"});
-
 });
