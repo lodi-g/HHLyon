@@ -51,6 +51,20 @@
     </form>
 </main>
 
+<script>
+$("form").on("submit", function() {
+    var checked_nb = 0;
+    $(".mdl-checkbox input").each(function() {
+        let checked = $(this).is(":checked");
+        if (checked) { checked_nb++; }
+    });
+    if (checked_nb === 0) {
+        alert("Veuillez cocher au moins un qualificatif.");
+        return false;
+    }
+});
+</script>
+
 <?php
 include_once ("Questionnaire.php");
 echo isset($_POST['niveauDouleur']);
