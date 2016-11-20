@@ -12,9 +12,8 @@
     <link href="node_modules/bootstrap/dist/css/style.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link href="node_modules/mdl/style.css" rel="stylesheet">
     <link href="node_modules/mdl/material.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="node_modules/mdl/style.css" rel="stylesheet">
 
 </head>
 
@@ -48,19 +47,27 @@
     <script src="nav.js"></script>
     <script src="node_modules/mdl/material.min.js"></script>
     <script>
-    setTimeout(function() {
-        componentHandler.upgradeDom();
-    }, 500);
     document.querySelectorAll(".mdl-navigation__link").forEach(function(el) {
         el.addEventListener("click", function() {
             document.querySelectorAll(".mdl-layout--fixed-header .is-visible").forEach(function(el) {
                 el.classList.remove("is-visible");
                 setTimeout(function() {
                     componentHandler.upgradeDom();
+                    addEventOnRange();
                 }, 100);
             });
         });
     });
+    setTimeout(function() {
+        componentHandler.upgradeDom();
+        addEventOnRange();
+    }, 500);
+    function addEventOnRange() {
+        document.querySelector("[type='range']").addEventListener("input", function(el) {
+            let data = document.querySelector(".mdl-slider__background-lower").getAttribute("style").replace(/flex: 0\.([0-9]+) .*/ig, "$1").replace("flex: 1 1 0%;", "10").replace("flex: 0 1 0%;", "0");
+            document.querySelector(".range-badge").setAttribute("data-badge", data);
+        });
+    }
     </script>
 </body>
 </html>
