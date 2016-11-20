@@ -32,10 +32,24 @@ class Questionnaire extends context
         $this->patient = $res[0];
     }
 
-    public function getAge()
+    public function getAge($date_naissance)
+
     {
-        return "12";
+        $arr1 = explode('/', $date_naissance);
+        $arr2 = explode('/', date('d/m/Y'));
+
+        if (($arr1[1] < $arr2[1]) || (($arr1[1] == $arr2[1]) && ($arr1[0] <= $arr2[0])))
+            return $arr2[2] - $arr1[2];
+
+        return $arr2[2] - $arr1[2] - 1;
+
     }
+
+// Petit exemple
+        $ma_date_de_naissance = select date_naissance from users where id = ;
+        $mon_age = Age($ma_date_de_naissance);
+
+        echo $mon_age;
 
 
     private function getAlert()
