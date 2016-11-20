@@ -30,14 +30,13 @@
 
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 
-        <!-- Always shows a header, even in smaller screens. -->
-    <header class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">L.U.Lu</span>
-                    <div class="mdl-layout-spacer"></div>
-                </div>
-            </header>
+    <div id="main" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">L.U.Lu</span>
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">L.U.Lu</span>
             <nav class="mdl-navigation">
@@ -47,10 +46,9 @@
                 <a class="mdl-navigation__link" href="#/questionnaire">Préparation consultation</a>
             </nav>
         </div>
-    </header>
-    <div id="main">
         <main class="mdl-layout__content">
-            <div class="page-content" ng-view></div>
+            <div class="page-content" ng-view>
+            </div>
         </main>
     </div>
 
@@ -67,9 +65,9 @@
     setTimeout(function() {
         componentHandler.upgradeDom();
     }, 500);
-    var header_link = document.querySelectorAll(".mdl-navigation__link").forEach(function(el) {
+    document.querySelectorAll(".mdl-navigation__link").forEach(function(el) {
         el.addEventListener("click", function() {
-            document.querySelectorAll("header .is-visible").forEach(function(el) {
+            document.querySelectorAll(".mdl-layout--fixed-header .is-visible").forEach(function(el) {
                 el.classList.remove("is-visible");
             });
         });
