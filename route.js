@@ -7,5 +7,6 @@ app.config(function($routeProvider){
         .when("/symptomes",{templateUrl: "Accueil/symptomes.html" })
         .when("/questionnaire" , {templateUrl: "QuestionnaireMedical/QuestionnaireMedical.html"})
         .when("/verificationQuestionnaire" , {templateUrl : "QuestionnaireMedical/GestionQuestionnaire.php"})
-        .otherwise({redirectTo : "/"});
+        .otherwise({redirectTo : "/"})
+        .when("/inscription",{templateUrl: "Inscription/Inscription.html" });
 });

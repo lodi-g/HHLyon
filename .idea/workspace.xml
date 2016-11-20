@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa3c56c4-d972-434b-93be-ef7ffa5bffc2" name="Default" comment="Merge branch 'master' of https://github.com/lodi-g/HHLyon&#10;&#10;# Conflicts:&#10;#&#9;Index.html&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Inscription/gestionInscription.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Inscription/inscription.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Accueil/symptomes.html" afterPath="$PROJECT_DIR$/Accueil/symptomes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Index.html" afterPath="$PROJECT_DIR$/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css" afterPath="$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Inscription/Inscription.html" afterPath="$PROJECT_DIR$/Inscription/Inscription.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/QuestionnaireMedical/GestionQuestionnaire.php" afterPath="$PROJECT_DIR$/QuestionnaireMedical/GestionQuestionnaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/route.js" afterPath="$PROJECT_DIR$/route.js" />
     </list>
     <list id="0e75130d-ced0-4b8b-8075-ef09c4903ab4" name="Rejected commit: Default" comment="Merge branch 'master' of https://github.com/lodi-g/HHLyon&#10;&#10;# Conflicts:&#10;#&#9;Index.html&#10;" />
     <ignored path="HHLyon.iws" />
@@ -28,54 +30,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="symptomes.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accueil/symptomes.html">
+      <file leaf-file-name="inscription.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Inscription/inscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.4838705">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Inscription-Copie.php" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Downloads/Inscription-Copie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62044656">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionnaireMedical.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/QuestionnaireMedical.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.64516">
+              <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1479597169422" expanded="true" signature="1112:1142" placeholder="SELECT * FRO... users" />
+                <marker date="1479597169422" expanded="true" signature="1337:1497" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1527" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1530" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1567" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1612" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1650" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1690" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1743" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1799" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1883" placeholder="INSERT INTO users... " />
+                <marker date="1479597169422" expanded="true" signature="1337:1911" placeholder="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Inscription.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Inscription/Inscription.html">
+      <file leaf-file-name="gestionInscription.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Inscription/gestionInscription.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.645162">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding />
+            <state vertical-scroll-proportion="0.31022328">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#86#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,40 +69,53 @@
         <entry file="file://$PROJECT_DIR$/route.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css">
+      <file leaf-file-name="GestionQuestionnaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/GestionQuestionnaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.064516">
-              <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+            <state vertical-scroll-proportion="-7.806452">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nav.js">
+      <file leaf-file-name="Inscription.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Inscription/Inscription.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state vertical-scroll-proportion="-3.548387">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Questionnaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/Questionnaire.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-36.903225">
+              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
               <folding>
-                <element signature="n#!!doc;n#openNav#0" expanded="false" />
+                <marker date="1479591687041" expanded="true" signature="717:747" placeholder="SELECT * FRO... users" />
+                <marker date="1479591687041" expanded="true" signature="1010:1249" placeholder="INSERT INTO patient... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accueil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Accueil/accueil.html">
+      <file leaf-file-name="formulaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/School Documents/BTS/PPE/Projet_formulaire_Esra/formulaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-10.645162">
+              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+              <folding>
+                <marker date="1447622882350" expanded="true" signature="1279:1441" placeholder="INSERT INTO user... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,6 +127,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -143,7 +142,13 @@
         <option value="$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css" />
         <option value="$PROJECT_DIR$/Accueil/symptomes.html" />
         <option value="$PROJECT_DIR$/Index.html" />
+        <option value="$PROJECT_DIR$/inscription.html" />
+        <option value="$PROJECT_DIR$/QuestionnaireMedical/Questionnaire.php" />
+        <option value="$PROJECT_DIR$/QuestionnaireMedical/GestionQuestionnaire.php" />
+        <option value="$PROJECT_DIR$/Inscription/inscription.php" />
+        <option value="$PROJECT_DIR$/Inscription/gestionInscription.php" />
         <option value="$PROJECT_DIR$/route.js" />
+        <option value="$PROJECT_DIR$/Inscription/Inscription.html" />
       </list>
     </option>
   </component>
@@ -201,6 +206,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestionnaireMedical" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,6 +341,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Connexion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HHLyon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Accueil" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -321,6 +368,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -425,14 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Inscription/Inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-80.28466">
@@ -451,21 +491,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css">
+    <entry file="file://$USER_HOME$/Downloads/Inscription-Copie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.064516">
-          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/QuestionnaireMedical.html">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -477,27 +515,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/School Documents/BTS/PPE/Projet_formulaire_Esra/formulaireConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33607522">
+          <caret line="13" column="1" selection-start-line="1" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/School Documents/BTS/PPE/Projet_formulaire_Esra/f-script.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447622880481" expanded="true" signature="202:236" placeholder="SELECT COUNT... user" />
+            <marker date="1447622880481" expanded="true" signature="607:661" placeholder="SELECT * FRO... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Connexion/context.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7955347">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/School Documents/BTS/PPE/Projet_formulaire_Esra/membre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Script/creationBDD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5986394">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/QuestionnaireMedical.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Connexion/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6286721">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.645162">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5452409">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/School Documents/BTS/PPE/Projet_formulaire_Esra/formulaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.645162">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <marker date="1447622882350" expanded="true" signature="1279:1441" placeholder="INSERT INTO user... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/Inscription-Copie.php">
+    <entry file="file://$PROJECT_DIR$/Inscription/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62044656">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="-19.64516">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding>
+            <marker date="1479597169422" expanded="true" signature="1112:1142" placeholder="SELECT * FRO... users" />
+            <marker date="1479597169422" expanded="true" signature="1337:1497" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1527" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1530" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1567" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1612" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1650" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1690" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1743" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1799" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1883" placeholder="INSERT INTO users... " />
+            <marker date="1479597169422" expanded="true" signature="1337:1911" placeholder="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Inscription/Inscription.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/Questionnaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.903225">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <folding>
+            <marker date="1479591687041" expanded="true" signature="717:747" placeholder="SELECT * FRO... users" />
+            <marker date="1479591687041" expanded="true" signature="1010:1249" placeholder="INSERT INTO patient... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionnaireMedical/GestionQuestionnaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.806452">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Inscription/gestionInscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31022328">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
