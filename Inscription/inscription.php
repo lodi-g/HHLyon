@@ -50,21 +50,48 @@ class Inscription extends context
 
     public function add()
     {
-        $addUser =
-            $this->context->query(
-                "INSERT INTO users(nom, prenom, datenaissance, adresse, telephone, nompersconf, prenompersconf, telpersconf, status)
+        echo "INSERT INTO users
+                  (nom
+                  , prenom
+                  , date_naissance
+                  , adresse
+                  , telephone
+                  , nom_personne_confiance
+                  , prenom_personne_confiance
+                  , tel_personne_confiance)
                   VALUES
                   (
-                    "+$this->nom
-                +"," + $this->prenom
-                +"," + $this->date_naissance
-                +"," + $this->adresse
-                +"," + $this->telephone
-                +"," + $this->nom_personne_confiance
-                +"," + $this->prenom_personne_confiance
-                +"," + $this->tel_personne_confiance
-                +"," + $this->status+
-                ")");
+                    '".$this->nom
+            ."','" . $this->prenom
+            ."','" . $this->date_naissance
+            ."','" . $this->adresse
+            ."','" . $this->telephone
+            ."','" . $this->nom_personne_confiance
+            ."','" . $this->prenom_personne_confiance
+            ."','" . $this->tel_personne_confiance
+            ."')";
+        $addUser =
+            $this->context->query(
+                "INSERT INTO users
+                  (nom
+                  , prenom
+                  , date_naissance
+                  , adresse
+                  , telephone
+                  , nom_personne_confiance
+                  , prenom_personne_confiance
+                  , tel_personne_confiance)
+                  VALUES
+                  (
+                    '".$this->nom
+                ."','" . $this->prenom
+                ."','" . $this->date_naissance
+                ."','" . $this->adresse
+                ."','" . $this->telephone
+                ."','" . $this->nom_personne_confiance
+                ."','" . $this->prenom_personne_confiance
+                ."','" . $this->tel_personne_confiance
+                ."')");
         return $addUser;
 
     }
