@@ -6,6 +6,7 @@ include_once("Connexion.php");
 $token = new Connexion();
 $token->connect_user();
 
+/*
 if ($token->valid())
 {
 ?>
@@ -20,3 +21,4 @@ else
 <?php
 }
     //header("Location: ..#/error");
+*/
