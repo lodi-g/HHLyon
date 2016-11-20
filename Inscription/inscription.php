@@ -18,11 +18,12 @@ class Inscription extends context
     private $prenom_personne_confiance;
     private $tel_personne_confiance;
     private $status;
+    private $context;
 
     public function __construct()
     {
-        $this->context = $this->connect();
-        $this->context = (new context())->connect();
+
+        $this->context = (new context())->try_connect();
         $this->nom = $_POST["nom"];
         $this->prenom = $_POST["prenom"];
         $this->date_naissance = $_POST["datenaissance"];
