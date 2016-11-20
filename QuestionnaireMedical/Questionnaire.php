@@ -63,8 +63,8 @@ class Questionnaire extends context
         $message = "Message";
         echo $message;
         echo "Fin numero personne";
-        $addPatient = true;
-            /*$this->context->query(
+        $addPatient =
+            $this->context->query(
                 "INSERT INTO patient
                   (
                     id_douleur 
@@ -78,7 +78,7 @@ class Questionnaire extends context
                     +"," + $this->circonstanceDouleur
                     +"," + $this->personneId
                     +"," + $this->niveauDouleur+
-                  ")");*/
+                  ")");
         return $addPatient;
 
     }
