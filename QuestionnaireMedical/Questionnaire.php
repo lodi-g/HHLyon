@@ -7,6 +7,7 @@
  * Time: 18:13
  */
 include_once("../Connexion/context.php");
+
 class Questionnaire extends context
 {
     private $personneId;
@@ -14,26 +15,26 @@ class Questionnaire extends context
     private $typeDouleur;
     private $circonstanceDouleur;
     private $patient;
-    public $context;
+    private $context;
 
-    public function __construct()
+    public function __construct($niveauDouleur ,$typeDouleur , $circonstance)
     {
-        $this->context = $this->connect();
-        $this->context = (new context())->connect();
-        $this->niveauDouleur = $_POST["niveauDouleur"];
-        $this->typeDouleur = $_POST["typeDouleur"];
-        $this->circonstanceDouleur = $_POST["circonstance"];
+        $this->context = (new context())->try_connect();
+        $this->niveauDouleur = $niveauDouleur;
+        $this->typeDouleur = $typeDouleur;
+        $this->circonstanceDouleur = $circonstance;
+        $this->personneId = '1';
     }
 
     private function getPatient()
     {
-        $res = $this->context->query("SELECT * FROM users WHERE id = " + $this->personneId);
+        $res = $this->context->query("SELECT * FROM users WHERE id = " .$this->personneId);
         $this->patient = $res[0];
     }
 
-    private function getAge()
+    public function getAge()
     {
-
+        return "12";
     }
 
 
@@ -44,8 +45,12 @@ class Questionnaire extends context
 
     public function add()
     {
-        $addPatient =
-            $this->context->query(
+        echo "Numero personne";
+        $message = "Message";
+        echo $message;
+        echo "Fin numero personne";
+        $addPatient = true;
+            /*$this->context->query(
                 "INSERT INTO patient
                   (
                     id_douleur 
@@ -59,7 +64,7 @@ class Questionnaire extends context
                     +"," + $this->circonstanceDouleur
                     +"," + $this->personneId
                     +"," + $this->niveauDouleur+
-                  ")");
+                  ")");*/
         return $addPatient;
 
     }

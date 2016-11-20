@@ -15,8 +15,8 @@ class context
 
     public function __construct()
     {
-        $this->user = "";
-        $this->password = "";
+        $this->user = "root";
+        $this->password = "root";
         $this->database ="hhlyon";
     }
 
