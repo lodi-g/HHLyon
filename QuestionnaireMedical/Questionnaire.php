@@ -17,6 +17,7 @@ class Questionnaire extends context
     private $patient;
     private $context;
     private $sexe;
+    private $date_naissance;
 
     public function __construct($niveauDouleur ,$typeDouleur , $circonstance)
     {
@@ -27,6 +28,7 @@ class Questionnaire extends context
         $this->circonstanceDouleur = $circonstance;
         $this->personneId = '2';
         $this->sexe=$session->sexe;
+        $this->date_naissance = $session->date_naissance;
         
     }
 
@@ -36,10 +38,10 @@ class Questionnaire extends context
         $this->patient = $res[0];
     }
 
-    public function getAge($date_naissance)
+    public function getAge()
 
     {
-        $arr1 = explode('/', $date_naissance);
+        $arr1 = explode('/', $this->date_naissance);
         $arr2 = explode('/', date('d/m/Y'));
 
         if (($arr1[1] < $arr2[1]) || (($arr1[1] == $arr2[1]) && ($arr1[0] <= $arr2[0])))
