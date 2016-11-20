@@ -69,6 +69,13 @@
     }
     </script>
 
+    <script>
+    $("a").on("click", function() {
+        setTimeout(function() {
+            componentHandler.upgradeDom();
+        }, 300);
+    });
+    </script>
 
     <script>
         $("#info").click(function(){

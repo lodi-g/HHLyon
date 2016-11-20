@@ -29,7 +29,7 @@ class Connexion extends context
 
         private function get_token_from_db()
         {
-            return "123";
+            return "sdf12";
         }
 
         public function connect_user()
@@ -55,7 +55,19 @@ class Connexion extends context
         private function validate_conn()
         {
             $data = Session::getInstance();
+            $infos = $this->get_infos($this->token);
             $data->token = $this->token;
+            foreach ($infos as $key => $value)
+            {
+                $data->$key = $value;
+            }
+        }
+
+        private function get_infos($token)
+        {
+            $req = $this->context->prepare("SELECT * FROM users WHERE token = :token");
+            $req->execute(["token" => $token]);
+            return $req->fetch(PDO::FETCH_ASSOC);
         }
     }
 
