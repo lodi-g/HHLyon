@@ -20,12 +20,14 @@ class Questionnaire extends context
 
     public function __construct($niveauDouleur ,$typeDouleur , $circonstance)
     {
+        $session = Session::getInstance();
         $this->context = (new context())->try_connect();
         $this->niveauDouleur = $niveauDouleur;
         $this->typeDouleur = $typeDouleur;
         $this->circonstanceDouleur = $circonstance;
         $this->personneId = '2';
-        $this->sexe="H";
+        $this->sexe=$session->sexe;
+        
     }
 
     private function getPatient()
