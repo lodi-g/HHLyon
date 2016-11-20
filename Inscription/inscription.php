@@ -26,12 +26,12 @@ class Inscription extends context
         $this->context = (new context())->try_connect();
         $this->nom = $_POST["nom"];
         $this->prenom = $_POST["prenom"];
-        $this->date_naissance = $_POST["datenaissance"];
+        $this->date_naissance = $_POST["date_naissance"];
         $this->adresse = $_POST["adresse"];
         $this->telephone = $_POST["telephone"];
-        $this->nom_personne_confiance = $_POST["nompersconf"];
-        $this->prenom_personne_confiance = $_POST["prenompersconf"];
-        $this->tel_personne_confiance = $_POST["telpersconf"];
+        $this->nom_personne_confiance = $_POST["nom_personne_confiance"];
+        $this->prenom_personne_confiance = $_POST["prenom_personne_confiance"];
+        $this->tel_personne_confiance = $_POST["tel_personne_confiance"];
         $this->status = $_POST["status"];
     }
 
