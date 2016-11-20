@@ -12,5 +12,6 @@ app.config(function($routeProvider){
         .when("/verificationInscription",{templateUrl: "Inscription/gestionInscription.html"})
         .when("/connect" , {templateUrl : "Connexion/login.php"})
         .when("/error", {templateUrl : "Connexion/error.html"})
+        .when("/validation", {templateUrl : "Inscription/validationInscription.html"})
         .otherwise({redirectTo : "/"});
 });
